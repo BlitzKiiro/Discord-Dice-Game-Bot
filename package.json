@@ -1,0 +1,24 @@
+{
+  "name": "dice-bot",
+  "version": "1.0.0",
+  "description": "dicord dice elimaniation bot ",
+  "main": "index.js",
+  "dependencies": {
+    "@prisma/client": "^3.0.2",
+    "discord.js": "^12.5.3",
+    "jimp": "^0.16.1",
+    "node-fetch": "^2.6.1",
+    "prisma": "^3.0.1",
+    "sequelize": "^6.6.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migrate": "npx prisma migrate dev --name init",
+    "introspect": "npx prisma db pull --force",
+    "studio": "npx prisma studio",
+    "generate" : "npx prisma generate",
+    "start" : "node index.js"
+  },
+  "author": "Ahmed Azmy",
+  "license": "ISC"
+}

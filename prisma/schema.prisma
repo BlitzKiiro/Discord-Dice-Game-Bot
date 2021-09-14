@@ -1,0 +1,44 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./database/db.sqlite"
+}
+
+
+model Games_Record {
+  played Int? @default(0) 
+  won     Int? @default(0)
+  player Player? @relation(fields: [uid], references:[uid])
+  uid String
+  sid String
+  @@map("Games Records")
+  @@id([uid,sid])
+}
+
+model Player {
+  uid     String   @id
+  credits BigInt? @default(0)
+  tropy Trophy? @relation(fields: [trophy_name],references: [name])
+  trophy_name String?  
+  rank Rank? @relation(fields: [rank_name], references: [name])
+  rank_name String?
+  records Games_Record[] 
+  @@map("Players")
+}
+
+model Rank {
+  name   String  @id
+  price BigInt 
+  players Player[]
+  @@map("Ranks")
+}
+
+model Trophy {
+  name String  @id 
+  price BigInt
+  players Player[]
+  @@map("Trophies")
+}
