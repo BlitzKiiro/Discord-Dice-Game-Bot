@@ -1,6 +1,6 @@
 const fs = require('fs')
 const fetch = require('node-fetch')
-const coordinates = require(__root+'/attachments/memes/coordinates.json')
+const coordinates = require(__root+'/attachments/meme/coordinates.json')
 const jimp = require('jimp')
 
 
