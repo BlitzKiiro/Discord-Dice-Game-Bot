@@ -5,8 +5,8 @@ const jimp = require('jimp')
 
 module.exports = async(winning_player) => {
     //get throne and crown img
-    const throne = fs.readFileSync(`${__root}\\attachments\\winner\\throne.jpg`)
-    const crown = fs.readFileSync(`${__root}\\attachments\\winner\\crown.png`)
+    const throne = fs.readFileSync(`${__root}/attachments/winner/throne.jpg`)
+    const crown = fs.readFileSync(`${__root}/attachments/winner/crown.png`)
     //get player avatar img
     const avatar_url = winning_player.displayAvatarURL({ format:'jpg',dynamic:false,size:512})
     const response = await fetch(avatar_url)
