@@ -7,9 +7,9 @@ const jimp = require('jimp')
 module.exports = async (losing_player) => {
 
     //get random meme template img and coordinates
-    const memes = fs.readdirSync(`${__root}\\attachments\\meme`)
+    const memes = fs.readdirSync(`${__root}/attachments/meme`)
     const ran_num = Math.floor(Math.random() *  (memes.length-1) + 1 )
-    const meme =  fs.readFileSync(`${__root}\\attachments\\meme\\${ran_num}.jpg`)
+    const meme =  fs.readFileSync(`${__root}/attachments/meme/${ran_num}.jpg`)
     const xyr = coordinates[ran_num]
 
     //get player avatar img
