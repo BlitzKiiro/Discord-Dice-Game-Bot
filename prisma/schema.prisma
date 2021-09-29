@@ -3,8 +3,8 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
-  url      = "file:./database/db.sqlite"
+  provider = "postgresql"
+  url      = "postgresql://postgres:co9OQYBoxocig2Vl@z084fb92c-postgresql.qovery.io:5432/db?schema=public"
 }
 
 
