@@ -1,5 +1,5 @@
 node_modules
 *.sqlite
 out
-config.json
-pt.js
+
+playground.js
